@@ -24,7 +24,7 @@ AWS lambda is used to parse the security scanning results and post them to AWS S
 
 ### CloudFormation for Pipeline:
 
-* codepipeline-template.yml: CloudFormation template to deploy DevSecOps CICD Pipeline 
+* workshop/templates/devsecops-codepipeline.yaml: CloudFormation template to deploy DevSecOps CICD Pipeline 
 
 ## Deploying pipeline:
 Download the CloudFormation template and pipeline code from GitHub repo.
@@ -40,9 +40,6 @@ Download the CloudFormation template and pipeline code from GitHub repo.
     *	Under Lambda functions, enter the Lambda function S3 bucket name, filename, and the handler name.
     *	Under STG Elastic Beanstalk Environment and PRD Elastic Beanstalk Environment, enter the Elastic Beanstalk environment and application details for staging and production to which this pipeline deploys the application code. 
     *	Under General, enter the email addresses to receive notifications for approvals and pipeline status changes. 
-
-
-Note: The provided CloudFormation template in this blog is formatted for AWS GovCloud, if you are setting this up in standard region, you will have to adjust the partition name in the CloudFormation template. For example, change arn values from “arn:aws-us-gov” to “arn:aws”. 
 
 
 ## License
